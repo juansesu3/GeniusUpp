@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const DashboardPage = () => {
   return (
     <>
-      <Button>Button</Button>
+     <p>Dashborad Page (Protected)</p>
     </>
   );
 };
