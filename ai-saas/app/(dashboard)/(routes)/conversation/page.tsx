@@ -1,5 +1,6 @@
 "use client";
 import * as z from "zod";
+import axios from "axios";
 import Heading from "@/components/Heading";
 import React from "react";
 import { MessageSquare } from "lucide-react";
@@ -9,10 +10,12 @@ import { formSchema } from "./constants";
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import {useRouter} from "next/navigation";
 
 interface Props {}
 
 const ConversationPage = (props: Props) => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -22,7 +25,14 @@ const ConversationPage = (props: Props) => {
   const isLoading = form.formState.isSubmitting;
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+   try {
+
+    
+   } catch (error:any) {
+    console.log(error);
+    
+   }
+   
   };
   return (
     <div>
