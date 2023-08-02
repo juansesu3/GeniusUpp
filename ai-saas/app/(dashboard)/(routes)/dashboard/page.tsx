@@ -1,11 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { UserButton } from "@clerk/nextjs";
 
 const DashboardPage = () => {
   return (
-    <>
-     <p>Dashborad Page (Protected)</p>
-    </>
+    <div>
+      <p>Dashborad Page (Protected)</p>
+    </div>
   );
 };
 
